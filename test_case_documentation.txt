@@ -1,0 +1,51 @@
+🧪 Test Case Documentation
+1️⃣ Test Coverage Item
+
+Unique Identifier
+#19956
+
+Description
+User login functionality in the “Lojinha” application
+
+Priority
+High
+
+Traceability
+Sequence Diagram #1223
+
+2️⃣ Test Case
+
+Test Case ID
+TC-LOGIN-001 (#1)
+
+Objective
+Validate that the system properly handles a user account with an expired password.
+
+Priority
+Low
+
+Traceability
+Sequence Diagram #1223
+
+Preconditions
+
+A registered user account exists with an expired password.
+
+Test Data / Inputs
+
+Username: julio-senha-expirada@julio.com.br
+
+Password: 123456
+
+Expected Result
+
+The system should display the following error message:
+"Your password has expired. Please renew it to continue logging in."
+
+Actual Result and Test Outcome
+Actual Result:
+The system displayed the correct expired password message and prevented login.
+
+(To be completed during test execution: Pass / Fail / Blocked)
+
+Status: Pass

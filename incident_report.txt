@@ -1,0 +1,71 @@
+Incident Report
+Unique Identifier
+
+#17889
+
+Title
+
+Login with expired password does not display an error message
+
+Time Information
+
+04/01/2021 15:32:12
+
+Originator
+
+Júlio de Lima
+
+Context
+
+Using Chrome version 62
+
+Using an Android mobile device
+
+Using the login credentials contained in Test Case #19956-1
+
+Incident Description
+
+After following the steps below, the application behaved incorrectly, thus revealing the incident:
+
+Opened Chrome
+
+Navigated to http://lojinha.com/
+
+Entered the username "julio-senha-expirada@julio.com.br
+"
+
+Entered the password "123456"
+
+Clicked on "Login"
+
+The user's secret screen was displayed instead of showing the message:
+"Your password has expired. Please renew it to continue logging in."
+The system should have remained on the same page.
+
+Evidence
+
+Log (01-04-2021.log)
+
+Screenshot (dadosPreenchidosLogin.png, telaLoginSecreta.png)
+
+Video (passoAPasso.mp4)
+
+Severity Assessment
+
+Low
+
+Priority Assessment
+
+High
+
+Risk
+
+Increases the possibility of attacks on the Login Screen
+
+Other user restrictions may not have been properly implemented
+
+Incident Status
+
+Fixed
+
+If you'd like, I can also rewrite this in a more concise format suitable for Jira or another bug-tracking tool.

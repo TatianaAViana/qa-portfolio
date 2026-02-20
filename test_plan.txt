@@ -1,0 +1,178 @@
+🧪 Test Plan
+1) General Information
+Overview
+
+This Test Plan aims to clarify for all stakeholders what will be tested within the project scope.
+
+Unique Identifier
+
+#1987
+
+Responsible Organization
+
+ERA Portugal.
+
+Approvers
+
+-Priscila Alves (CEO)
+
+-James Rodrigues (Tech Lead)
+
+Change History
+
+-April 1, 2021 – Test Plan created
+
+-April 2, 2021 – Approvers updated
+
+Overall Scope
+
+In Scope:
+
+-Lojinha 1.0 Web Project
+
+Out of Scope:
+
+-Lojinha 1.0 API
+-Lojinha 1.0 Android App
+-Lojinha 1.0 iOS App
+
+References
+
+-Lojinha 1.0 Web Sequence Diagrams
+
+Glossary
+
+-Responsiveness: Automatic adaptation to different screen sizes.
+-API: Application Programming Interface.
+
+2) Test Context
+Test Projects or Subprocesses
+
+-Lojinha Web
+
+Test Items
+
+-Lojinha Web
+
+Test Scope
+
+Features to be Tested:
+
+Login
+
+-Product Registration
+-Product Search
+-Product Deletion
+-Product Editing
+-Component Registration
+-Component Deletion
+-Component Search
+
+Features Not to be Tested:
+-User Registration
+
+Assumptions and Constraints
+
+-Test environments must support multiple versions of Lojinha Web (Production).
+-Testing tools are available only for Chrome and Firefox browsers.
+
+Stakeholders
+
+Priscila Alves (CEO)
+
+3️) Test Communication Risk Register ( put mitigation and contigency plan)
+Product Risks
+
+-Risk of security attacks on the Login page.
+
+Project Risks
+
+-High employee turnover within ERA.
+
+4️) Test Strategy
+Subprocess Testing
+
+-Lojinha Web
+
+Test Deliverables
+
+-Test Cases
+-Test Procedures
+-Test Logs
+-Test Plan
+
+Test Design Techniques
+
+-Decision Table
+-Equivalence Partitioning
+
+Test Completion Criteria
+
+100% of medium- and high-priority incidents must be corrected and closed.
+
+Metrics to Be Collected
+
+Percentage of defects corrected and closed.
+
+Test Data Requirements
+
+List of pre-registered products in Lojinha.
+
+Five pre-registered users Lojinha.
+
+Test Environment Requirements
+
+Servers capable of supporting 1,000 concurrent users.
+
+New Tests and Regression Testing
+
+New test cases must be created for each new delivery.
+
+Regression testing must be performed before release to the next phase.
+
+Suspension and Resumption Criteria
+
+Suspension:
+
+Lojinha API is unavailable for more than three consecutive days.
+
+Resumption:
+
+Lojinha API has been operational for more than 24 hours.
+
+Deviations from Corporate Test Strategy
+
+Due to the limited number of testers assigned to this project, developers will assist in executing test cases when necessary.
+
+5️⃣ Activities and Estimates
+Test Activities and Estimates
+
+Document review – Julio – 8 days
+
+Test case design – Tatiana – 12 days
+
+Test automation – Juan – 15 days
+
+6️⃣ Team
+Roles, Activities, and Responsibilities
+
+Test Analyst – Tatiana: Create test cases e Execute test cases
+
+Test Automation Engineer – Júlio: Develop web automation scripts
+
+Hiring Needs
+
+BrowserStack for cloud testing
+
+Performance testing specialist
+
+Training Needs
+
+Test automation training with Selenium WebDriver in Java
+
+7️⃣ Schedule
+Timeline
+
+April 1 – April 8: Document review
+April 1 – April 12: Test case design
+April 12 – April 27: Test automation

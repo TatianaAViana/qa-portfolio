@@ -1,0 +1,125 @@
+Test Completion Report
+Unique Identifier: #4789
+
+Summary of Tests Performed
+
+Login
+
+Product Registration
+
+Product Search
+
+Product Deletion
+
+Product Update
+
+Component Registration
+
+Component Deletion
+
+Component Search
+
+Deviations from the Test Plan
+
+April 1 – April 8: Document review (completed on April 10).
+
+Two new team members joined to help eliminate the two-day delay.
+
+They worked with the team until 10:00 PM.
+
+April 1 – April 12: Creation of test cases
+
+Experienced a pause, which was resolved after four days.
+
+April 12 – April 27: Test automation
+
+Started one day late due to the resignation of two team members.
+
+They were replaced two days after their departure.
+
+The plan was adjusted to begin on April 13, including eight hours of overtime.
+
+Test Completion Evaluation
+
+100% of medium- and high-priority incidents were fixed and closed.
+
+All medium- and high-priority incidents have been resolved.
+
+Factors That Blocked Progress
+
+35% of the requirements were not delivered by April 1, which blocked progress, as 65% of the tests had already been delivered.
+
+On April 8 at 2:00 PM, an additional 20% of the requirements were delivered.
+
+On April 10, the remaining 15% were delivered.
+
+Finally, the test cases were delivered on the planned date (April 12, 2021).
+
+Test Metrics
+
+Executed vs. Planned Test Cases
+
+Executed: 100
+
+Planned: 100
+
+Current Status: 100% executed
+
+Reported and Unresolved Incidents
+
+Incidents Reported: 5
+
+Incidents Fixed: 5
+
+Current Status: 100% of incidents have been resolved
+
+Residual Risks (*)
+
+Project Risks: High turnover at ERA.
+
+Test Results (Test Artifacts)
+
+a) Test Plans
+
+Test Plan #1987
+
+b) Test Cases
+
+Test Case #19956-1
+
+Test Case #19956-2
+
+c) Test Procedures
+
+Test Procedure #14567
+
+d) Test Logs
+
+Test Log #35999
+
+e) Incident Reports
+
+Incident Report #17889
+
+f) Test Status Reports
+
+Test Status Report #3455
+
+Reusable Test Assets
+
+a) Test Cases
+
+Test Case #19956-1
+
+Test Case #19956-2
+
+b) Test Procedures
+
+Test Procedure #14567
+
+Lessons Learned
+
+During test execution, the Lojinha API was unavailable for 24 hours.
+The team had no actions to execute during this period.
+
+One lesson learned was that instead of waiting, we could use mocks to simulate the real service.

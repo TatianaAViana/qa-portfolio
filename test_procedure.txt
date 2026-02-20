@@ -1,0 +1,78 @@
+🧪 Test Procedure
+1️⃣ Test Coverage Item
+
+Unique Identifier
+#14567
+
+Description
+Login execution tests for the Lojinha Web application
+
+2️⃣ Test Procedure
+Objective and Priority
+
+Objective:
+Validate the different login scenarios in the Lojinha Web application.
+
+Priority:
+High
+
+Estimated Duration
+
+30 minutes
+
+Initial Setup
+
+Connect to the internet
+
+Open an approved browser (Firefox or Chrome)
+
+Relationship with Other Procedures
+
+N/A
+
+Procedure Steps
+Step #1
+
+Related Test Cases:
+
+#19956-#1
+
+#19956-#2
+
+Activity:
+Fill in the login form fields.
+
+Result Analysis:
+Verify that the fields turn green after being filled in.
+
+Expected Output:
+The completed fields should turn green.
+
+Actual Result:
+Login and Password fields are displayed in green.
+
+Step #2
+
+Related Test Cases:
+
+#19956-#1
+
+#19956-#2
+
+Activity:
+Submit the login form.
+
+Result Analysis:
+Verify that the secure page is displayed.
+
+Expected Output:
+The secure page should be presented.
+
+Actual Result:
+The secure page is successfully displayed.
+
+Stop and Closure Criteria
+
+Log out of the system if logged in
+
+Close the browser

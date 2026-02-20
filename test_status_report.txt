@@ -1,0 +1,69 @@
+Test Status Report
+Unique Identifier
+
+#3455
+
+Reporting Period
+
+04/01/2025 to 04/08/2025
+
+Progress Against the Test Plan
+
+April 1 – April 8: Document review (2 days behind schedule)
+
+We brought in two new team members to help eliminate the two-day delay.
+
+They will be working with the team today until 10:00 PM.
+
+April 1 – April 12: Test case creation (On hold)
+
+April 12 – April 27: Test automation (Not started)
+
+Factors Blocking Progress
+
+35% of the requirements have not yet been delivered.
+
+This blocks progress since we have already created test cases for the 65% that were delivered.
+
+The requirements team is actively working on this and has committed to delivering:
+
+15% of the requirements by 2:00 PM today
+
+The remaining 20% within two days
+
+This will provide sufficient time for us to complete the 15% we will receive today at 2:00 PM.
+
+Test Metrics
+Executed vs. Planned Test Cases
+
+Executed: 40
+
+Planned: 100
+
+Current Status: 40% executed
+
+Reported and Unresolved Incidents
+
+Incidents Reported: 5
+
+Incidents Fixed: 2
+
+Current Status: 60% of incidents remain unresolved
+
+New and Updated Risks
+
+Increased possibility of attacks on the Login Screen (Product risk)
+
+Two out of five test automation engineers have resigned
+
+Test automation is scheduled to begin in 4 days
+
+We have already hired two new automation engineers who will start on the 13th, resulting in only a one-day schedule delay
+
+The automation engineers will work two hours of overtime each to recover the one-day delay
+
+Planned Testing
+
+Automation engineers have already managed the schedule delay
+
+The Document Review and Test Case Creation activities are expected to be completed
