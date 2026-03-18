@@ -1,0 +1,97 @@
+Java Concepts Necessary for QA
+
+1. Basic Syntax
+- Variables
+- Data types: int, double, char, boolean, String
+- Operators: arithmetic, comparison, logical
+- Comments
+
+2. Control Flow
+- if, else if, else
+- switch
+- for loop
+- while loop
+- do-while loop
+
+3. Methods
+- Method declaration
+- Parameters and arguments
+- Return types
+- Static methods
+
+4. Object-Oriented Programming (OOP)
+- Classes and objects
+- Attributes and methods
+- Constructors
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
+
+5. Collections
+- Array
+- ArrayList
+- HashMap
+- List, Set, Map basics
+
+6. Exception Handling
+- try
+- catch
+- finally
+- throw
+- throws
+
+7. Strings
+- String methods
+- String comparison
+- StringBuilder basics
+
+8. Access Modifiers
+- public
+- private
+- protected
+- default
+
+9. Packages and Imports
+- Creating packages
+- Importing classes
+
+10. File Handling
+- Reading files
+- Writing files
+- BufferedReader
+- FileWriter
+
+11. Useful QA Automation Concepts
+- Selenium basics with Java
+- Locators: id, name, xpath, cssSelector
+- WebDriver methods
+- Assertions with TestNG or JUnit
+- Test annotations
+- Waits: implicit wait, explicit wait
+
+12. Debugging and Logs
+- Print statements
+- Reading error messages
+- Basic debugging in IDE
+
+13. Maven Basics
+- pom.xml
+- Dependencies
+- Build lifecycle
+
+14. Git Basics for QA Automation
+- clone
+- add
+- commit
+- push
+- pull
+
+15. API Testing Related Java Concepts
+- JSON handling
+- HTTP requests basics
+- Parsing responses
+- Status code validation
+
+Why these concepts matter for QA
+These Java concepts help QA professionals understand automation scripts, create maintainable test cases, debug failures, work with frameworks like Selenium, and collaborate better with developers.
