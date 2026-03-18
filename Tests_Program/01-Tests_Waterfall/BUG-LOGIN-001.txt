@@ -1,0 +1,68 @@
+🐞 Bug Report
+Bug ID
+
+BUG-LOGIN-001
+
+Title
+
+Expired password error message is not displayed during login attempt
+
+Related Test Case
+
+TC-LOGIN-001 (#19956-1)
+
+Environment
+
+Application: Lojinha
+
+Environment: Test / Staging
+
+Browser: Chrome (latest version)
+
+OS: Windows 10
+
+Severity
+
+High
+
+Priority
+
+High
+
+Preconditions
+
+A registered user account exists with an expired password.
+
+Steps to Reproduce
+
+Navigate to the Login page.
+
+Enter username: julio-senha-expirada@julio.com.br
+
+Enter password: 123456
+
+Click on the "Login" button.
+
+Expected Result
+
+The system should display the following error message:
+"Your password has expired. Please renew it to continue logging in."
+
+The user should not be allowed to log in.
+
+Actual Result
+
+The system did not display the expired password message.
+The login process continued without showing any validation error.
+
+Impact
+
+Users with expired passwords may gain unintended access or receive unclear system feedback, impacting security and user experience.
+
+Status
+
+Open
+
+Linked Incident
+
+RI #17889

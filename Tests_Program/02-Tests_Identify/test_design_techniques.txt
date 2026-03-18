@@ -1,0 +1,100 @@
+Test Design Techniques: Equivalence Partitioning, Boundary Value Analysis, and Decision Tables
+
+1. Equivalence Partitioning
+
+Equivalence Partitioning is a test design technique used to divide input data into groups, or partitions, that are expected to behave in the same way. The idea is that if one value from a partition works correctly, the other values in the same partition will likely behave similarly.
+
+This technique helps reduce the number of test cases while still keeping good test coverage.
+
+Example:
+If a system accepts ages from 18 to 60, the partitions can be:
+- Invalid: less than 18
+- Valid: from 18 to 60
+- Invalid: greater than 60
+
+Possible test values:
+- 16 (invalid partition)
+- 30 (valid partition)
+- 65 (invalid partition)
+
+2. Boundary Value Analysis
+
+Boundary Value Analysis focuses on the values at the edges of input ranges, because defects often happen near boundaries.
+
+Instead of testing only typical values, this technique checks the minimum, maximum, and values just below and above the limits.
+
+Example:
+If a field accepts numbers from 1 to 100, important boundary test values are:
+- 0 (just below minimum)
+- 1 (minimum valid)
+- 2 (just above minimum)
+- 99 (just below maximum)
+- 100 (maximum valid)
+- 101 (just above maximum)
+
+This method is very effective for finding validation errors.
+
+3. Decision Table Testing
+
+Decision Table Testing is used when the result depends on multiple conditions. A decision table helps organize conditions and actions in a structured format, making it easier to identify all possible combinations.
+
+This technique is useful for business rules, workflows, and systems with several logical conditions.
+
+Example:
+A user can log in only if:
+- the username is correct
+- the password is correct
+
+Decision table:
+
+| Username Correct | Password Correct | Result         |
+|------------------|------------------|----------------|
+| Yes              | Yes              | Login allowed  |
+| Yes              | No               | Access denied  |
+| No               | Yes              | Access denied  |
+| No               | No               | Access denied  |
+
+Why these techniques are important
+
+These test design techniques help QA professionals create efficient and structured test cases. They improve coverage, reduce unnecessary repetition, and increase the chance of finding defects early.
+
+Summary:
+- Equivalence Partitioning groups similar inputs
+- Boundary Value Analysis checks the edges of ranges
+- Decision Tables organize combinations of conditions and expected results
+
+TEST CASE TABLE
+
++-----+----------------------+-------------------+------+------+------+------+------+------+------+
+| Typ | Variable             | Equiv. Partition  | TC1  | TC2  | TC3  | TC4  | TC5  | TC6  | TC7  |
++-----+----------------------+-------------------+------+------+------+------+------+------+------+
+| C   | Number of Components | < 0               |  X   |  X   |      |      |      |      |      |
+| C   | Number of Components | 0 to 16           |      |      |  X   |  X   |      |      |      |
+| C   | Number of Components | > 16              |      |      |      |      |  X   |  X   |      |
+| C   | User Type            | Teaching Assistant|  X   |      |  X   |      |      |      |      |
+| C   | User Type            | Not Teaching Asst.|      |  X   |      |  X   |  X   |  X   |      |
++-----+----------------------+-------------------+------+------+------+------+------+------+------+
+
+RESULT / ACTIONS
+
++------------------------+------+------+------+------+------+------+------+
+| Result / Action        | TC1  | TC2  | TC3  | TC4  | TC5  | TC6  | TC7  |
++------------------------+------+------+------+------+------+------+------+
+| Failure                |  X   |  X   |      |      |      |      |      |
+| Success                |      |      |  X   |  X   |  X   |  X   |      |
+| Add Component = Yes    |      |      |  X   |      |      |      |      |
+| Add Component = No     |      |      |      |  X   |  X   |  X   |      |
++------------------------+------+------+------+------+------+------+------+
+
+
+
+RULES
+
+1. Number of Components
+- < 0       = Invalid
+- 0 to 16   = Valid
+- > 16      = Invalid
+
+2. User Type
+- Teaching Assistant     = Valid
+- Not Teaching Assistant = Invalid

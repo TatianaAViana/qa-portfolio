@@ -1,0 +1,41 @@
+SQL Definition and Examples
+
+What is SQL?
+SQL stands for Structured Query Language. It is used to communicate with databases.
+With SQL, you can create tables, insert data, update records, delete information, and query data.
+
+Main uses of SQL:
+- Create and manage database structures
+- Insert new data into tables
+- Read data with queries
+- Update existing records
+- Delete records when necessary
+
+Basic SQL examples:
+
+Create a table
+CREATE TABLE users (
+    id INT,
+    name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+Insert data
+INSERT INTO users (id, name, email)
+VALUES (1, 'Anna', 'anna@email.com');
+
+Select data
+SELECT * FROM users;
+
+Update data
+UPDATE users
+SET email = 'anna.new@email.com'
+WHERE id = 1;
+
+Delete data
+DELETE FROM users
+WHERE id = 1;
+
+Why SQL is good for a Git portfolio?
+SQL files are great for Git because they are plain text files.
+Git can track changes clearly, compare versions, and show your progress over time.

@@ -1,0 +1,52 @@
+🧪 Test Case – Login with Valid Credentials
+Test Case ID
+
+TC-LOGIN-001
+
+Test Scenario Description
+
+Verify that a registered user can successfully log in with valid credentials.
+
+Requirement ID (Traceability)
+
+REQ-LOGIN-01
+
+Priority
+
+High
+
+Preconditions
+
+User must be registered in the system.
+User account must be active.
+User is on the login page.
+
+Test Data
+
+Email: testuser@email.com
+Password: Password123
+
+Test Steps
+
+1. Open the web application.
+2. Navigate to the Login page.
+3. Enter a valid registered email.
+4. Enter the correct password.
+5. Click on the "Login" button.
+
+Expected Result
+
+- User is successfully authenticated.
+- User is redirected to the dashboard/home page.
+- No error message is displayed.
+
+Actual Result
+
+(To be filled during execution)
+
+User successfully logged in and redirected to dashboard.
+
+Status
+
+X Pass / Fail / Blocked
+
