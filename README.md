@@ -1,42 +1,32 @@
 🧪 QA Portfolio – Manual Testing Project
 📌 Project Objective
+# QA Portfolio
 
-This project simulates the testing process of a simple web application (Login and User Registration system).
-The objective is to demonstrate practical knowledge in manual testing, including test planning, test case design, defect reporting, and test execution.
+This repository contains my QA portfolio with test documentation and practical examples of software testing activities.
 
-🎯 Scope
+## Contents
 
-* The scope of this project includes:
-* Login functionality
-* User registration functionality
-* Input field validation
-* Error handling
-* Basic user flow validation
+- Test Program
+- Test Plan
+- Test Procedures
+- Test Cases
+- Incident Reports
+- Test Status Reports
+- Test Completion Reports
+- Logs and execution evidence
 
-Out of scope:
-* Performance testing
-* Security testing
-* Automation testing
+## Purpose
 
-🔍 Test Types Applied
+The purpose of this portfolio is to demonstrate my knowledge and practical skills in Quality Assurance, including test planning, test execution, defect reporting, and test documentation.
 
-* The following test types were applied:
-* Functional Testing
-* Regression Testing
-* Exploratory Testing
-* Negative Testing
-* Validation Testing
+## Skills Demonstrated
 
-📂 Repository Structure
+- Test documentation
+- Manual testing
+- Bug/incident reporting
+- Test execution tracking
+- QA process organization
 
-/test-plan → Test strategy and planning documentation
-/test-cases → Detailed test cases
-/bug-reports → Defect documentation
-/evidence → Screenshots or execution proof
+## Notes
 
-📊 Tools Used
-
-* Manual testing approach
-* Test documentation structured in markdown format
-* GitHub for version control
-  
+The files in this repository were created for study and portfolio purposes.
