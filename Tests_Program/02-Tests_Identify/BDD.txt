@@ -1,0 +1,128 @@
+# QA TEST CASES - BDD (Given / When / Then)
+
+FEATURE: Product Management - Validation and User Feedback
+
+---
+
+## SCENARIO 1: Prevent product creation with empty name
+
+Given the user is on the product creation page
+When the user submits the form without a product name
+Then the system should display a validation error message
+And the product should not be created
+And the user should remain on the same page
+
+---
+
+## SCENARIO 2: Prevent product creation with invalid quantity
+
+Given the user is on the product creation page
+When the user enters quantity = 0
+And submits the form
+Then the system should display an error indicating invalid quantity
+And the product should not be saved
+
+---
+
+## SCENARIO 3: Handle invalid form submission correctly
+
+Given the user is editing a product
+When the user submits invalid data
+Then the system should not redirect to the product list
+And should keep the user on the edit page
+And should display clear validation messages
+
+---
+
+## SCENARIO 4: Ensure products have mandatory fields
+
+Given the user is creating a product
+When the user submits the form without name and color
+Then the system should block the submission
+And display required field messages
+
+---
+
+## SCENARIO 5: Editing products requires valid identifiers
+
+Given a product without a name exists
+When the user tries to edit the product
+Then the system should not rely only on name as identifier
+And should allow editing through a valid unique ID
+
+---
+
+FEATURE: Product Deletion Feedback
+
+---
+
+## SCENARIO 6: Display success message after product deletion
+
+Given the user is on the product list
+When the user deletes a product
+Then the system should display a success message
+And the message should include the product name
+
+---
+
+## SCENARIO 7: Browser compatibility - Firefox deletion feedback
+
+Given the user is using Firefox browser
+When the user deletes a product
+Then the success message should be displayed correctly
+
+---
+
+FEATURE: Authentication & Access Control
+
+---
+
+## SCENARIO 8: Prevent access without login
+
+Given the user is not authenticated
+When the user tries to access the product list URL
+Then the system should redirect to login page
+And display a clear message explaining login is required
+
+---
+
+## SCENARIO 9: Registration availability
+
+Given the user is on the platform
+When the user looks for a registration option
+Then the system should provide a visible signup option
+
+---
+
+FEATURE: Responsive Design
+
+---
+
+## SCENARIO 10: Layout responsiveness on screen resize
+
+Given the user is on the product module
+When the user resizes the screen to smaller resolution
+Then the layout should adjust correctly
+And no elements should overlap or break
+
+---
+
+## SCENARIO 11: Layout stability across resolutions
+
+Given the user accesses the system on different screen sizes
+When the product page is displayed
+Then the UI should remain usable and consistent
+
+---
+
+## NOTES
+
+* These test cases are based on exploratory testing insights
+* Focus areas:
+  • Validation
+  • User feedback
+  • Navigation behavior
+  • Responsiveness
+  • Browser compatibility
+
+END

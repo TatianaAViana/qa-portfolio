@@ -1,0 +1,108 @@
+# QA - Exploratory Testing with Hypothesis & Bug History
+
+1. BUG HISTORY (Histórico de Falhas)
+
+---
+
+During the lifecycle of a software system, multiple failures occur.
+These failures are usually recorded as inconsistencies (bugs) so they can be fixed.
+
+These records become a valuable knowledge base that can be reused to:
+
+* Improve product quality
+* Identify recurring issues
+* Inspire new test scenarios
+
+Examples of known failures:
+
+F1: Layout breaks when screen size is changed (responsive issue)
+F2: System allows registering a component with quantity = 0 (invalid data)
+F3: After removing a component in Firefox, success message is not displayed
+
+2. IDENTIFIED PROBLEMS (FROM EXPLORATION)
+
+---
+
+* No option to register (signup) in the platform
+* User cannot access product list URL without login, but system does not clearly inform this requirement
+
+3. EXPLORATORY TESTING BASED ON HYPOTHESIS
+
+---
+
+Definition:
+Exploratory testing is a dynamic testing approach where tests are designed and executed simultaneously, often guided by hypotheses.
+
+H1: The system does not provide clear and assertive feedback to users in the product management module
+
+H1C1: Submitting forms with invalid or incomplete data
+
+Observations:
+
+* It is possible to register a product without name and without color → Is this expected?
+* Products without name cannot be edited (name is used as link)
+* When submitting invalid data, user is redirected to product list instead of staying on edit screen
+
+H1C2: Removing products
+
+Observations:
+
+* System does not clearly display a success message after deletion
+* Improvement: Add product name in the success message for clarity
+
+H2: The system cannot properly handle page resizing (responsiveness issue)
+
+H2C1: Change screen width and evaluate layout of Product module
+
+Observations:
+
+* Layout becomes distorted when resizing the screen
+* Indicates lack of responsiveness or CSS issues
+
+4. HOW HYPOTHESIS-BASED TESTING WORKS
+
+---
+
+Steps:
+
+1. Create a hypothesis
+   → Example: "Users are not receiving clear feedback"
+
+2. Design test scenarios
+   → Think of situations that can confirm or refute the hypothesis
+
+3. Execute tests
+   → Interact with the system
+
+4. Observe results
+   → Collect evidence
+
+5. Evaluate results against hypothesis
+   → Confirm or reject
+
+6. Repeat
+   → Refine or create new hypotheses
+
+7. KEY TAKEAWAYS
+
+---
+
+* Bug history is a powerful input for exploratory testing
+* Hypothesis-driven testing helps focus investigation
+* User feedback (messages, errors, flows) is critical in QA
+* Always question: "Is this expected behavior?"
+* Redirection and validation are common sources of issues
+
+6. PRACTICAL QA MINDSET
+
+---
+
+Always think:
+
+* What happens if the user does something wrong?
+* What happens if required data is missing?
+* Does the system guide the user properly?
+* Is the feedback clear and helpful?
+* Does the UI behave well in different screen sizes?
+
+END OF NOTES

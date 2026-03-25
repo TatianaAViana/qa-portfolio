@@ -1,0 +1,122 @@
+# HEURISTIC TESTING NOTES – QA PORTFOLIO
+
+1. INTRODUCTION
+
+---
+
+Heuristic testing is an exploratory testing approach where the tester uses experience-based techniques and general rules (heuristics) to identify defects, usability issues, and inconsistencies.
+
+This approach is useful when:
+
+* Requirements are unclear or incomplete
+* Fast feedback is needed
+* The goal is to explore system behavior beyond predefined test cases
+
+2. HEURISTIC CATEGORIES USED
+
+---
+
+During testing, the following heuristic categories were applied:
+
+* Required Fields (Campos obrigatórios)
+* Enable / Disable behavior
+* Action interruption
+* Flow break (quebra de fluxo)
+* Menu usability
+* Field overflow (estouro de campos)
+
+3. TEST FINDINGS (PRACTICAL CASES)
+
+---
+
+3.1 REQUIRED FIELDS (Campos obrigatórios)
+
+* The system allows creating or editing a product without a name
+  → Critical issue: Product name is essential but not required
+
+* The system shows validation for "value range"
+  → However, no validation exists for missing product name
+  → Inconsistent validation behavior
+
+* Product color is not required
+  → Needs clarification: Is this expected or a gap in validation?
+
+* No visual distinction between required and optional fields
+  → Usability issue: Users cannot easily identify mandatory inputs
+
+* Component name is not required during creation/editing
+  → Inconsistent with expected data importance
+
+3.2 FIELD OVERFLOW (Estouro de campos)
+
+* Long text in "username" field returns "user not authenticated" error
+  → Incorrect error message (should validate input length)
+
+* Long text in "password" field returns "user not authenticated"
+  → Misleading feedback
+
+* Long text in parameters returns HTTP 414 (URI too long)
+  → System lacks proper frontend/backend validation
+
+* Product created with:
+
+  * Name: 200 characters
+  * Valid value and color
+
+→ System shows success message
+→ However, product is not listed afterward
+
+→ Critical inconsistency between system feedback and actual result
+
+3.3 FLOW BREAK (Quebra de fluxo)
+
+* After successful product creation message, user cannot find the product in the list
+  → Break in expected user flow
+
+* System behavior does not match feedback given to the user
+  → Violates trust and usability principles
+
+3.4 FEEDBACK & CONSISTENCY
+
+* System provides misleading or incorrect error messages
+* Success messages do not reflect actual system state
+* Validation rules are inconsistent across fields
+
+4. KEY ISSUES IDENTIFIED
+
+---
+
+* Missing validation for critical fields (e.g., product name)
+* Inconsistent validation rules
+* Misleading system feedback (error/success messages)
+* Lack of required field indicators
+* System allows invalid or incomplete data
+* UI/UX issues affecting user understanding
+* Backend and frontend validation mismatch
+
+5. QA INSIGHTS
+
+---
+
+This testing revealed that:
+
+* Validation must be consistent and aligned with business rules
+* User feedback must reflect real system behavior
+* Required fields must be clearly indicated
+* Edge cases (e.g., long inputs) expose hidden system weaknesses
+* Heuristic testing is effective in uncovering usability + functional issues
+
+6. CONCLUSION
+
+---
+
+Heuristic testing allowed the identification of critical issues related to:
+
+* Data validation
+* User feedback
+* System consistency
+* Usability
+
+This approach complements structured test cases and is essential for improving overall software quality.
+
+END 
