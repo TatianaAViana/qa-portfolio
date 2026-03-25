@@ -1,0 +1,61 @@
+# Risk Management Basics (Software Testing)
+
+## 1. Basic Concepts
+
+A risk refers to the possibility of something good or bad happening.  
+In testing, we focus only on the possibility of negative outcomes.  
+
+The goal is to identify as many risks as possible related to the software and then mitigate them.
+
+Mitigation is the attempt to prevent a risk from becoming an actual problem.
+
+
+## 2. Identifying Risks
+
+Risk identification can be done individually or in groups.
+
+Example (after discussion between QA, PO, and Tech Lead):
+
+R1: Unauthorized users gaining access to valid user data  
+R2: Clients using Safari and Firefox cannot use the application  
+R3: Website login is not accessible, blocking 24% of users  
+
+
+## 3. Classifying Risks
+
+After identifying risks, we classify them using:
+
+- Impact (I): level of damage caused  
+- Probability (P): likelihood of occurrence  
+
+Scale: 1 (very low) to 5 (very high)
+
+R1: P=4, I=5 → Unauthorized data access  
+R2: P=5, I=1 → Browser incompatibility  
+R3: P=2, I=3 → Login not accessible  
+
+
+## 4. Risk Level
+
+Risk Level = Impact × Probability
+
+R1: 4 × 5 = 20  
+R2: 5 × 1 = 5  
+R3: 2 × 3 = 6  
+
+
+## 5. Prioritizing Risks
+
+Risks should be prioritized based on their level:
+
+1. R1 (20) → Highest priority  
+2. R3 (6)  
+3. R2 (5) → Lowest priority  
+
+
+## Summary
+
+- Identify risks  
+- Classify using Impact and Probability  
+- Calculate Risk Level  
+- Prioritize based on severity  
