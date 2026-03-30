@@ -1,0 +1,104 @@
+TEST COVERAGE EXERCISES
+
+---------------------------------------------
+DECISION COVERAGE
+
+Concept:
+Decision coverage ensures that all possible outcomes (true and false) of a condition are tested.
+
+Example:
+
+public boolean isSingleDigit(int value){
+    boolean isSingle = false;
+    if (value <= 9) {
+        isSingle = true;
+    }
+    return isSingle;
+}
+
+Test Strategy:
+To achieve full decision coverage, we must test:
+
+1. value <= 9  → TRUE case
+2. value > 9   → FALSE case
+
+Example test cases:
+- value = 5   → expected: true
+- value = 10  → expected: false
+
+---------------------------------------------
+STATEMENT COVERAGE
+
+Concept:
+Statement coverage ensures that all lines of code are executed at least once.
+
+Example:
+
+public boolean isSingleDigit(int value){
+    boolean isSingle = false;
+    if (value <= 9) {
+        isSingle = true;
+    }
+    return isSingle;
+}
+
+Test Strategy:
+To achieve full statement coverage:
+
+- At least one test must execute the "if" block
+- At least one test must skip the "if" block
+
+Example test cases:
+- value = 3   → executes if block
+- value = 15  → skips if block
+
+---------------------------------------------
+PRACTICAL EXERCISE
+
+Write tests to achieve 100% coverage for the code below:
+
+public boolean isValidValue(double value){
+    if (value > 0) {
+        if (value <= 7000) {
+            return true;
+        }
+    }
+    throw new Exception("Values below 0.01 are not allowed");
+}
+
+Test Strategy:
+
+To achieve full coverage, we must test all possible paths:
+
+1. Valid value (inside range)
+   - value > 0 AND value <= 7000
+   Example: value = 100 → expected: true
+
+2. Lower boundary invalid
+   - value <= 0
+   Example: value = 0 → expected: exception
+
+3. Upper boundary invalid
+   - value > 7000
+   Example: value = 7001 → expected: exception
+
+4. Edge cases
+   - value = 0.01 → valid
+   - value = 7000 → valid
+
+---------------------------------------------
+NOTES
+
+- Decision coverage focuses on TRUE/FALSE conditions
+- Statement coverage focuses on executing all lines
+- Full coverage requires testing:
+  * Valid scenarios
+  * Invalid scenarios
+  * Boundary values
+
+---------------------------------------------
+NEXT STEP
+
+These scenarios can be automated using pytest to ensure:
+- Regression safety
+- Reliable validation of business rules

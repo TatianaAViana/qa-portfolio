@@ -1,0 +1,191 @@
+API REST TESTING – AUTHENTICATION & TOKEN HANDLING
+
+PROJECT OVERVIEW
+This project demonstrates API testing focused on authentication and token-based authorization using a REST API (Lojinha API). It includes exploratory testing using the VADER heuristic.
+
+TOOLS USED
+
+* Postman
+* Swagger
+* JSON
+* REST API
+
+---
+
+AUTHENTICATION FLOW
+
+1. LOGIN REQUEST
+
+POST /v2/login
+
+Request Body:
+{
+"username": "admin",
+"password": "admin"
+}
+
+Expected Response:
+Status Code: 200 OK
+
+{
+"token": "your_token_here"
+}
+
+Validation:
+
+* Token must be returned
+* Status code must be 200
+* Response time should be acceptable
+
+---
+
+2. USING THE TOKEN
+
+Authorization Header:
+Authorization: Bearer your_token_here
+
+---
+
+3. AUTHENTICATED REQUEST
+
+GET /v2/produtos
+
+Header:
+Authorization: Bearer your_token_here
+
+Expected Result:
+
+* Status Code: 200 OK
+* Returns list of products
+
+---
+
+API ENDPOINTS COVERED
+
+POST    /v2/login              -> Authenticate user
+GET     /v2/produtos           -> Get all products
+GET     /v2/produtos/{id}      -> Get product by ID
+POST    /v2/produtos           -> Create product
+PUT     /v2/produtos/{id}      -> Update product
+DELETE  /v2/produtos/{id}      -> Delete product
+
+---
+
+TEST CASES
+
+TC01 – Valid Login
+Input: Valid credentials
+Expected:
+
+* 200 OK
+* Token returned
+
+TC02 – Invalid Login
+Input: Wrong password
+Expected:
+
+* 401 Unauthorized
+
+TC03 – Missing Fields
+Input: Empty body
+Expected:
+
+* 400 Bad Request
+
+TC04 – Access Without Token
+Request: GET /v2/produtos
+Expected:
+
+* 401 Unauthorized
+
+TC05 – Expired Token
+Expected:
+
+* 403 Forbidden
+
+---
+
+PRODUCT TESTS
+
+TC06 – Create Product
+{
+"produtoNome": "PS4",
+"produtoValor": 199.99,
+"produtoCores": ["black", "white"]
+}
+
+Expected:
+
+* 201 Created
+
+TC07 – Get Products
+Expected:
+
+* 200 OK
+* List of products returned
+
+TC08 – Update Product
+Expected:
+
+* 200 OK
+* Product updated successfully
+
+TC09 – Delete Product
+Expected:
+
+* 204 No Content
+
+---
+
+EXPLORATORY TESTING – VADER HEURISTIC
+
+V – VERBS (HTTP METHODS)
+
+* Used a valid method to create a user and it succeeded
+* Attempted unsupported methods on the same endpoint → received 405 Method Not Allowed
+
+A – AUTHENTICATION & AUTHORIZATION
+
+* Valid token → request succeeded
+* Missing token → returned 401 Unauthorized (expected behavior)
+
+D – DATA
+
+* Sent product value as STRING → accepted and stored as decimal
+* Sent product name as BOOLEAN (true) → saved as "1"
+  Observation: This indicates weak validation on backend
+* Sent product name with 644 characters:
+
+  * Response: 201 Created
+  * Issue: Product ID did not change
+  * Issue: Component was added to the last product instead of the correct one
+    → Potential data integrity bug
+
+E – ERRORS
+
+* N/A (no explicit error handling inconsistencies identified beyond above cases)
+
+R – RESPONSIVENESS
+
+* After 5 token requests:
+
+  * Average response time was acceptable
+  * Maximum observed: 295ms
+
+---
+
+HTTP STATUS CODES VALIDATED
+
+200 OK
+201 Created
+204 No Content
+400 Bad Request
+401 Unauthorized
+403 Forbidden
+405 Method Not Allowed
+
+---
+
+CONCLUSION
+
+This project validates authentication mechanisms and explores API robustness using VADER heuristic testing. It highlights potential issues in data validation and consistency, demonstrating strong QA analytical skills in REST API testing.

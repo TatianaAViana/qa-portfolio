@@ -1,0 +1,83 @@
+API REST TESTING – BASIC CHECKLIST
+
+This checklist outlines the key validation points when testing REST APIs, ensuring coverage of functionality, data integrity, and system behavior.
+
+---
+
+BUSINESS RULES
+[ ] Validate that all business rules are correctly implemented
+[ ] Ensure expected behavior aligns with requirements
+
+---
+
+FLOW CONTINUITY
+[ ] Verify end-to-end flow consistency (e.g., login → action → result)
+[ ] Ensure no broken or inconsistent transitions between steps
+
+---
+
+DATA TYPES VALIDATION
+[ ] Validate correct data types (string, number, boolean, etc.)
+[ ] Test invalid types to verify proper error handling
+[ ] Ensure type consistency in request and response
+
+---
+
+PARAMETERS VALIDATION
+[ ] Validate request body parameters
+[ ] Validate query parameters (filters)
+[ ] Validate path parameters (IDs, resources)
+[ ] Test missing, invalid, and extra parameters
+
+---
+
+AUTHENTICATION (MULTIPLE USERS)
+[ ] Test with different user roles/tokens
+[ ] Validate access control and permissions
+[ ] Ensure unauthorized access is blocked
+
+---
+
+HTTP METHODS VALIDATION
+[ ] Validate correct usage of methods (GET, POST, PUT, DELETE)
+[ ] Test invalid methods → expect 405 Method Not Allowed
+
+---
+
+RESOURCE LISTING (0, 1, MANY)
+[ ] Validate empty responses (no data)
+[ ] Validate single resource response
+[ ] Validate multiple resources response
+
+---
+
+RESPONSE STRUCTURE
+[ ] Validate JSON structure and schema
+[ ] Check required fields and data consistency
+[ ] Validate response format matches documentation
+
+---
+
+HTTP STATUS CODES
+[ ] 200 OK – Success
+[ ] 201 Created – Resource created
+[ ] 204 No Content – Successful deletion
+[ ] 400 Bad Request – Invalid input
+[ ] 401 Unauthorized – Authentication failure
+[ ] 403 Forbidden – Access denied
+[ ] 404 Not Found – Resource not found
+[ ] 405 Method Not Allowed – Invalid method
+[ ] 500 Internal Server Error – Unexpected failure
+
+---
+
+API CONTRACT / DOCUMENTATION
+[ ] Validate endpoints against Swagger/OpenAPI documentation
+[ ] Ensure request/response matches contract
+[ ] Identify inconsistencies between implementation and documentation
+
+---
+
+CONCLUSION
+
+This checklist ensures comprehensive API validation, covering functional behavior, security, data integrity, and compliance with API contracts. It supports both structured and exploratory testing approaches.

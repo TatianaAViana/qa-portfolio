@@ -14,31 +14,31 @@ ERA Portugal.
 
 Approvers
 
--Priscila Alves (CEO)
+-Priscila Alves (IT Tecnology)
 
 -James Rodrigues (Tech Lead)
 
 Change History
 
--April 1, 2021 – Test Plan created
+-April 1, 2025 – Test Plan created
 
--April 2, 2021 – Approvers updated
+-April 2, 2025 – Approvers updated
 
 Overall Scope
 
 In Scope:
 
--Lojinha 1.0 Web Project
+-Store 1.0 Web Project
 
 Out of Scope:
 
--Lojinha 1.0 API
--Lojinha 1.0 Android App
--Lojinha 1.0 iOS App
+-Store 1.0 API
+-Store 1.0 Android App
+-Store 1.0 iOS App
 
 References
 
--Lojinha 1.0 Web Sequence Diagrams
+-Store 1.0 Web Sequence Diagrams
 
 Glossary
 
@@ -48,11 +48,11 @@ Glossary
 2) Test Context
 Test Projects or Subprocesses
 
--Lojinha Web
+-Store Web
 
 Test Items
 
--Lojinha Web
+-Store Web
 
 Test Scope
 
@@ -73,12 +73,12 @@ Features Not to be Tested:
 
 Assumptions and Constraints
 
--Test environments must support multiple versions of Lojinha Web (Production).
+-Test environments must support multiple versions of Store Web (Production).
 -Testing tools are available only for Chrome and Firefox browsers.
 
 Stakeholders
 
-Priscila Alves (CEO)
+Priscila Alves (IT Tecnology)
 
 3️) Test Communication Risk Register ( put mitigation and contigency plan)
 Product Risks
@@ -116,9 +116,9 @@ Percentage of defects corrected and closed.
 
 Test Data Requirements
 
-List of pre-registered products in Lojinha.
+List of pre-registered products in Store.
 
-Five pre-registered users Lojinha.
+Five pre-registered users Store.
 
 Test Environment Requirements
 

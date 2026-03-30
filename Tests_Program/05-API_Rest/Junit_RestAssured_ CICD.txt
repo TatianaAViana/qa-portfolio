@@ -1,0 +1,205 @@
+API TEST AUTOMATION – JUNIT, RESTASSURED & CI/CD (GITHUB ACTIONS)
+
+PROJECT OVERVIEW
+This project demonstrates automated API testing using RestAssured and JUnit, integrated with a CI/CD pipeline using GitHub Actions.
+
+The objective is to ensure continuous validation of API behavior, enabling fast feedback and reliable deployments.
+
+---
+
+TECH STACK
+
+* Java
+* JUnit 5
+* RestAssured
+* Maven
+* GitHub Actions
+* JSON
+
+---
+
+PROJECT STRUCTURE
+
+qa-api-automation/
+│
+├── src/test/java/
+│   ├── base/
+│   │   └── BaseTest.java
+│   │
+│   ├── tests/
+│   │   ├── AuthTest.java
+│   │   └── ProductTest.java
+│   │
+│   └── utils/
+│       └── TokenManager.java
+│
+├── pom.xml
+└── .github/workflows/api-tests.yml
+
+---
+
+BASE CONFIGURATION
+
+BaseTest.java
+
+import io.restassured.RestAssured;
+import org.junit.jupiter.api.BeforeAll;
+
+public class BaseTest {
+
+```
+@BeforeAll
+public static void setup() {
+    RestAssured.baseURI = "http://api.lojinha.com";
+}
+```
+
+}
+
+---
+
+AUTHENTICATION TEST
+
+AuthTest.java
+
+import io.restassured.http.ContentType;
+import org.junit.jupiter.api.Test;
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+public class AuthTest extends BaseTest {
+
+```
+@Test
+public void shouldLoginSuccessfully() {
+
+    given()
+        .contentType(ContentType.JSON)
+        .body("{ \"username\": \"admin\", \"password\": \"admin\" }")
+    .when()
+        .post("/v2/login")
+    .then()
+        .statusCode(200)
+        .body("token", notNullValue());
+}
+```
+
+}
+
+---
+
+TOKEN MANAGER
+
+TokenManager.java
+
+import io.restassured.http.ContentType;
+import static io.restassured.RestAssured.*;
+
+public class TokenManager {
+
+```
+public static String getToken() {
+    return given()
+            .contentType(ContentType.JSON)
+            .body("{ \"username\": \"admin\", \"password\": \"admin\" }")
+    .when()
+            .post("/v2/login")
+    .then()
+            .extract()
+            .path("token");
+}
+```
+
+}
+
+---
+
+PRODUCT TEST
+
+ProductTest.java
+
+import org.junit.jupiter.api.Test;
+import static io.restassured.RestAssured.*;
+
+public class ProductTest extends BaseTest {
+
+```
+@Test
+public void shouldGetProducts() {
+
+    String token = TokenManager.getToken();
+
+    given()
+        .header("Authorization", "Bearer " + token)
+    .when()
+        .get("/v2/produtos")
+    .then()
+        .statusCode(200);
+}
+```
+
+}
+
+---
+
+CI/CD PIPELINE – GITHUB ACTIONS
+
+.github/workflows/api-tests.yml
+
+name: API Tests Pipeline
+
+on:
+push:
+branches: [ "main" ]
+pull_request:
+branches: [ "main" ]
+
+jobs:
+run-api-tests:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v3
+
+  - name: Set up JDK 17
+    uses: actions/setup-java@v3
+    with:
+      distribution: 'temurin'
+      java-version: '17'
+
+  - name: Build and Run Tests
+    run: mvn clean test
+```
+
+---
+
+PIPELINE BEHAVIOR
+
+* Automatically runs on every push to main
+* Runs on pull requests (PR validation)
+* Executes all automated API tests
+* Fails pipeline if any test fails
+
+---
+
+BENEFITS OF CI/CD IN QA
+
+✔ Early detection of defects
+✔ Continuous validation of API behavior
+✔ Safer deployments
+✔ Faster feedback loop for developers
+✔ Improved software quality
+
+---
+
+CONCLUSION
+
+This project demonstrates a complete QA automation workflow:
+
+* Automated API testing using RestAssured
+* Structured and maintainable test design
+* CI/CD integration using GitHub Actions
+
+It reflects real-world practices used in modern software teams, ensuring scalability, reliability, and continuous quality assurance.

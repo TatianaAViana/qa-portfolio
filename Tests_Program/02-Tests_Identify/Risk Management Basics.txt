@@ -53,6 +53,49 @@ Risks should be prioritized based on their level:
 3. R2 (5) → Lowest priority  
 
 
+🧪 Risk Mitigation Through Testing
+
+Tests are executed to reduce the probability of risks, not to prove absence of bugs.
+
+Example:
+
+Initial assumption: Probability = 5 (high uncertainty)
+10 relevant tests are designed to validate the risk
+After executing 5 tests (50%) with no defects found → confidence increases
+
+➡️ Updated probability ≈ 3 (reduced uncertainty, not zero risk)
+
+This means:
+
+Testing does not eliminate risk
+Testing increases confidence and reduces probability
+Remaining risk still exists and should be monitored
+🎯 Practical Example
+
+Risk: Unauthorized access to user data
+Impact: 5
+
+Tests executed:
+
+Invalid password attempts
+Session validation checks
+Access control verification
+
+Result:
+
+No bugs found in initial executions
+Probability reduced based on evidence
+Risk level recalculated and reprioritized
+
+🧪 Example Scenarios Covered
+Invalid form submissions (missing or incorrect data)
+Product creation and deletion flows
+User feedback (error/success messages)
+Authentication and access control
+Responsive layout issues
+Browser-specific behavior (e.g., Firefox issues)
+
+
 ## Summary
 
 - Identify risks  

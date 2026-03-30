@@ -5,7 +5,7 @@ Unique Identifier
 #19956
 
 Description
-User login functionality in the “Lojinha” application
+User login functionality in the “Store” application
 
 Priority
 High
@@ -33,7 +33,7 @@ A registered user account exists with an expired password.
 
 Test Data / Inputs
 
-Username: julio-senha-expirada@julio.com.br
+Username: tatiana-password-expired@tatiana.com
 
 Password: 123456
 
