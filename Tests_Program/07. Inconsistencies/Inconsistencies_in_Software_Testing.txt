@@ -1,0 +1,141 @@
+# Inconsistencies in Software Testing
+
+## 1. Basic Concepts
+
+An inconsistency (defect, bug, or issue) is any deviation between the expected and actual behavior of a system.
+
+It can occur in:
+
+* Requirements
+* Design
+* Code
+* User interface
+* Data processing
+
+---
+
+## 2. Classification of Inconsistencies
+
+### By Type
+
+* Functional: Feature does not work as expected
+* UI/UX: Layout, alignment, or usability issues
+* Performance: Slow response, timeouts
+* Security: Vulnerabilities or data exposure
+* Compatibility: Issues across browsers/devices
+
+### By Origin
+
+* Requirement inconsistencies
+* Design inconsistencies
+* Development inconsistencies
+* Integration inconsistencies
+
+---
+
+## 3. Sources of Inconsistencies
+
+* Ambiguous or incomplete requirements
+* Miscommunication between stakeholders
+* Poor design decisions
+* Coding errors
+* Environment differences
+* Third-party integrations
+
+---
+
+## 4. Identifying Inconsistencies
+
+Inconsistencies can be identified through:
+
+* Manual testing
+* Automated testing
+* Exploratory testing
+* Code reviews
+* User feedback
+
+Key techniques:
+
+* Compare expected vs actual results
+* Boundary value analysis
+* Equivalence partitioning
+
+---
+
+## 5. Classification: Priority and Severity
+
+### Severity (Impact on system)
+
+* Critical: System crash, data loss
+* High: Major functionality broken
+* Medium: Partial functionality affected
+* Low: Minor issue (UI, cosmetic)
+
+### Priority (Business urgency)
+
+* High: Must be fixed immediately
+* Medium: Should be fixed soon
+* Low: Can be fixed later
+
+---
+
+## 6. Reporting Inconsistencies
+
+A good bug report should include:
+
+* Title: Clear and concise
+* Description: Detailed explanation
+* Steps to reproduce
+* Expected result
+* Actual result
+* Environment (OS, browser, version)
+* Attachments (screenshots, logs)
+
+Example:
+"Login fails with valid credentials on Chrome"
+
+---
+
+## 7. Inconsistency Lifecycle
+
+1. New
+2. Assigned
+3. Open
+4. Fixed
+5. Retest
+6. Closed
+
+Optional states:
+
+* Reopened
+* Rejected
+* Deferred
+
+---
+
+## 8. Good Practices
+
+* Write clear and reproducible reports
+* Avoid assumptions
+* Use consistent terminology
+* Prioritize based on impact and business value
+* Collaborate with developers
+* Validate fixes properly
+
+---
+
+## 9. Support Tools
+
+Common tools used in QA:
+
+* Bug tracking: Jira, Bugzilla, Azure DevOps
+* Test management: TestRail, Zephyr
+* Automation: Selenium, Rest Assured
+* API testing: Postman
+* CI/CD: Jenkins, GitHub Actions
+
+---
+
+## Conclusion
+
+Managing inconsistencies effectively ensures software quality, improves user experience, and supports efficient team collaboration.

@@ -1,0 +1,66 @@
+ALTER FACE – QA Heuristic for Modern Web Applications (REST APIs)
+
+Created by Júlio de Lima, this heuristic supports QA Engineers and Test Analysts in testing modern web applications.
+
+A – Activation
+Focus on triggers that activate system behaviors (e.g., user actions, events, API calls).
+
+T – Timing
+Validate time-based behaviors such as delays, timeouts, session expiration, and asynchronous processes.
+
+R – Removable
+Ensure elements (data, sessions, cache) can be safely removed or reset without breaking the system.
+
+A – Achievable
+Check whether operations and flows can be completed successfully under expected conditions.
+
+F – Floating
+Test dynamic elements that may change position or state (e.g., responsive UI, async content).
+
+A – Achievable (again contextually)
+Reinforces validation of successful outcomes across different scenarios.
+
+C – Collision
+Validate how the system handles conflicts (e.g., concurrent users, race conditions).
+
+E – Expansion
+Test scalability and system behavior under increased load or data growth.
+
+
+--- Cookies and Sessions ---
+Web applications commonly use login mechanisms to control access to private data. Cookies and sessions store user information to maintain authenticated navigation. When a session expires, the user must lose access to protected areas.
+
+
+--- Key Testing Focus Areas ---
+- Cross-browser compatibility
+- Scalability (exponential usage)
+- Responsiveness
+- Security
+- Performance
+- User flows
+- Accessibility
+- Geolocation
+
+
+--- Isolating the UI ---
+When APIs are not ready, mocks can simulate backend responses. This allows testing the frontend independently (e.g., GET /products/{id} not ready but UI is testable).
+
+
+--- Visual Regression Testing ---
+Compare UI across versions to detect unintended visual changes (layout, colors, components).
+
+
+--- Cross Browser Testing ---
+Ensure the application behaves consistently across different browsers and devices.
+
+
+--- Accessibility Testing ---
+Validate compliance with accessibility standards using tools to ensure usability for all users.
+
+
+--- Front-end Performance ---
+Applications must be fast. Performance depends on API response times and frontend optimization. Tools like Google PageSpeed Insights help identify improvements.
+
+
+--- Broken Links Testing ---
+Validate that all links point to valid resources. Broken links (404) negatively impact user experience and navigation.

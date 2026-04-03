@@ -1,0 +1,35 @@
+🧪 Web Testing Checklist – QA Portfolio
+
+As part of my QA approach, I apply a structured checklist to ensure web applications are reliable, secure, and user-friendly. Below are key areas I validate during testing:
+
+🔍 Functional & Business Logic Validation
+Business Rules: Ensured that core logic (calculations, permissions, validations) aligns with business requirements.
+User Flow Continuity: Validated end-to-end user journeys (e.g., sign-up → login → checkout) to prevent blockers or drop-offs.
+🔐 Security & Access Control
+Direct URL Access: Tested unauthorized access to restricted pages via direct URL manipulation.
+Session & Cookie Expiration: Verified proper session handling, including automatic logout and protection against session hijacking.
+📊 Data Handling & Edge Cases
+Data Listing (0, 1, many): Validated system behavior with empty states, single entries, and large datasets.
+Pagination: Ensured correct navigation and performance across paginated data.
+🧾 Forms & Input Validation
+Form Submission Methods: Checked correct use of GET/POST, data integrity, and validation rules.
+Input Masks & Field Types: Validated proper formatting (e.g., phone numbers, dates) and input restrictions.
+⚡ Frontend Behavior & Performance
+AJAX Requests: Tested asynchronous data loading and error handling without page reloads.
+Performance: Assessed load times and responsiveness under normal and heavy conditions.
+🎨 UI/UX & Accessibility
+Visual Regression: Ensured UI consistency after changes or deployments.
+Accessibility: Verified usability for users with disabilities (basic a11y checks).
+Broken Links: Identified and reported invalid or dead links.
+🔗 Special Links & Navigation
+Special Links: Validated behaviors like redirects, downloads, opening in new tabs, and deep links.
+🛠️ Tools & Practices
+Manual Testing (Exploratory & Structured)
+Test Case Design & Execution
+Jira (bug tracking & backlog refinement)
+Postman (API validation when needed)
+Browser DevTools (network, console, performance)
+📈 Impact
+Improved product reliability by identifying critical edge cases
+Reduced production bugs through structured regression coverage
+Enhanced user experience by validating real user flows and accessibility
