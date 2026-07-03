@@ -1,8 +1,11 @@
-# 🧪 QA Portfolio – Manual Testing Project
+# 🧪 QA Portfolio – Testing Project
 
 ## 📌 Project Objective
 
 This repository showcases my QA portfolio, containing practical examples of manual testing activities and test documentation.
+
+Automation Tests 
+* Playwright
 
 The goal is to demonstrate how I approach software quality, from planning to execution and reporting.
 
@@ -11,13 +14,7 @@ The goal is to demonstrate how I approach software quality, from planning to exe
 ## 📂 Contents
 
 * Test Program
-* Test Plan
-* Test Procedures
-* Test Cases (BDD - Given/When/Then)
-* Incident Reports (Bug Reports)
-* Test Status Reports
-* Test Completion Reports
-* Logs and Execution Evidence
+* Automation
 
 ---
 
